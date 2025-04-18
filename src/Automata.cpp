@@ -11,10 +11,10 @@ Automata::Automata() {
 }
 
 void Automata::on() {
-	if (state == OFF) {
-		state == WAIT;
-		std::cout << "Автомат включен. Ожидание действий." << std::endl;
-	}
+    if (state == OFF) {
+        state = WAIT;
+        std::cout << "Автомат включен. Ожидание действий." << std::endl;
+    }
 }
 
 void Automata::off() {
