@@ -11,10 +11,10 @@ Automata::Automata() {
 }
 
 void Automata::on() {
-    if (state == OFF) {
-        state = WAIT;
-        std::cout << "Автомат включен. Ожидание действий." << std::endl;
-    }
+	if (state == OFF) {
+		state = WAIT;
+		std::cout << "Автомат включен. Ожидание действий." << std::endl;
+	}
 }
 
 void Automata::off() {
@@ -69,7 +69,7 @@ void Automata::check() {
 			state = COOK;
 		}else {
 			state = ACCEPT;
-			std::cout << "Недостаточно средств. Требуется ещё " << (prices[selectedDrink] - cash) << " руб." << std::endl;
+			std::cout << "Недостаточно средств. Требуется ещё " << (prices[selectedDrink] - cash) << " руб. " << std::endl;
 		}
 	}
 }
