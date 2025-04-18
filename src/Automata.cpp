@@ -84,7 +84,6 @@ void Automata::cancel() {
 
 void Automata::cook() {
     if (state == COOK) {
-        std::cout << "Preparation " << menu[selectedDrink] << "..." << std::endl;
         int price = prices[selectedDrink];
         int change = cash - price;
         cash = 0;
