@@ -96,5 +96,5 @@ TEST(AutomataTest, SelectInvalidDrink) {
     automata.on();
     automata.coin(200);
     automata.choice(10);
-    EXPECT_EQ(automata.getState(), CHECK);
+    EXPECT_EQ(automata.getState(), ACCEPT);
 }

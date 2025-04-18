@@ -1,4 +1,6 @@
+//"Copyright 2025 Owner"
 #include "Automata.h"
+#include <iostream>
 
 Automata::Automata() {
 	cash = 0;
@@ -10,11 +12,8 @@ Automata::Automata() {
 
 void Automata::on() {
 	if (state == OFF) {
-		state = WAIT;
+		state == WAIT;
 		std::cout << "Автомат включен. Ожидание действий." << std::endl;
-	} 
-	else {
-
 	}
 }
 
@@ -22,8 +21,7 @@ void Automata::off() {
 	if (state == WAIT) {
 		state = OFF;
 		std::cout << "Автомат выключен." << std::endl;
-	}
-	else {
+	}else {
 		std::cout << "Невозможно выключить автомат во время работы!" << std::endl;
 	}
 }
@@ -57,12 +55,10 @@ void Automata::choice(int drink) {
 			std::cout << "Вы выбрали: " << menu[drink] << std::endl;
 			selectedDrink = drink;
 			state = CHECK;
-		}
-		else {
+		}else {
 			std::cout << "Неверный индекс напитка" << std::endl;
 		}
-	}
-	else {
+	}else {
 		std::cout << "Некорректное состояние" << std::endl;
 	}
 }
@@ -71,8 +67,7 @@ void Automata::check() {
 	if (state == CHECK) {
 		if (cash >= prices[selectedDrink]) {
 			state = COOK;
-		}
-		else {
+		}else {
 			state = ACCEPT;
 			std::cout << "Недостаточно средств. Требуется ещё " << (prices[selectedDrink] - cash) << " руб." << std::endl;
 		}
@@ -84,8 +79,7 @@ void Automata::cancel() {
 		std::cout << "Отмена операции. Возврат денег: " << cash << " руб." << std::endl;
 		cash = 0;
 		state = WAIT;
-	}
-	else {
+	}else {
 		std::cout << "Невозможно отменить в текущем состоянии." << std::endl;
 	}
 }
